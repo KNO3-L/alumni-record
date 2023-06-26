@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+    <title>首页</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <!-- 注册 -->
+            <div class="register-box hidden">
+                <h1>register</h1>
+                <input type="text" placeholder="真实姓名（务必属实）">
+                <input type="password" placeholder="密码">
+                <button onclick="javascript:clickEvent('register')">注册</button>
+            </div>
+            <!-- 登录 -->
+            <div class="login-box">
+                <h1>login</h1>
+                <input type="text" placeholder="姓名">
+                <input type="password" placeholder="密码">
+                <button onclick="javascript:clickEvent('login')">登录</button>
+            </div>
+
+        </div>
+        <div class="con-box left">
+            <h2>欢迎注册<span>同学录</span></h2>
+            <p>快来创建你的<span>专属账号</span>吧</p>
+            <span>By:</span>
+            <img src="images/my-qq-photo.jpg" alt="">
+            <p>已有账号</p>
+            <button id="login">去登录</button>
+        </div>
+        <div class="con-box right">
+            <h2>欢迎使用<span>同学录</span></h2>
+            <p>快来填写你的专属<span>同学录</span>吧</p>
+            <span>By:</span>
+            <img src="images/my-qq-photo.jpg" alt="">
+            <p>没有账号？</p>
+            <button id="register">去注册</button>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>

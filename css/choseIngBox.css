@@ -1,0 +1,21 @@
+#file-input-box>.hidden {
+    opacity: 0;
+    width: 10px;
+}
+
+#file-input-box {
+    display: none;
+}
+
+#file-input-box>* {
+    vertical-align: middle;
+}
+
+#image-preview {
+    display: None;
+    width: 200px;
+    border: 1px solid black;
+    margin-left: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+}

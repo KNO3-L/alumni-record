@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>请选择模板</title>
+    <link rel="stylesheet" href="../css/chosePage.css">
+    <link rel="stylesheet" href="../css/window.css">
+    <link rel="stylesheet" href="../css/choseIngBox.css">
+    <link rel="stylesheet" href="../css/btn.css">
+</head>
+
+<body>
+    <ul>
+        <li>
+            <h1>03</h1>
+            <a href="#" onclick="javaScript:clickEvent(3)"><span>
+                    <p>不满意?自己上传!</p>
+                </span></a>
+        </li>
+        <li>
+            <h1>02</h1>
+            <a href="#" onclick="javaScript:clickEvent(2)"><span>Chose Me</span></a>
+        </li>
+        <li>
+            <h1>01</h1>
+            <a href="#" onclick="javaScript:clickEvent(1)"><span>Chose Me</span></a>
+        </li>
+    </ul>
+    <!-- 此处也可动态生成 -->
+    <div class="mask-wrapper">
+        <div class="mask-box">
+            <div class="mask-content">
+                <div class="mask-header">
+                    <button class="close"><i class="el-icon el-message-box__close"><svg viewBox="0 0 1024 1024"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill="currentColor"
+                                    d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z">
+                                </path>
+                            </svg></i></button>
+                    <span class="mask-header-title"></span>
+                </div>
+                <div class="mask-body">
+                    <div class="mask-body-content" id="table-wrapper">
+
+                    </div>
+                </div>
+                <div class="mask-foot">
+                    <button class="btn btn-submit">提交</button>
+                    <button class="btn btn-close">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="file-input-box">
+        <button id="file-input-button" class="btn">上传</button><input type="file" id="file-input" class="hidden"
+            accept="image/*"><span id="img-name">空</span><br><img alt="" id="image-preview">
+    </div>
+
+    <script src="../js/chosePage.js"></script>
+    <script src="../js/window-chose.js"></script>
+    <script src="../js/choseImgBox.js"></script>
+</body>
+
+</html>

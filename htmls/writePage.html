@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/btn.css">
+    <link rel="stylesheet" href="../css/writePage.css">
+    <link rel="stylesheet" href="../css/window.css">
+</head>
+
+<body>
+
+    <div id="main">
+        <img alt="" id="background">
+
+        <div id="setting-box">
+            <input type="color" name="" id="color">
+            <input type="range" name="" id="range" min="20" max="100" value="100" step="any">
+        </div>
+
+        <div id="photo">
+            <span id="photo-tip">君之画像:</span><br>
+            <img src="../images/default-photo.png" alt="" id="img-preview">
+            <input type="file" accept="image/*" name="" id="file-input">
+        </div>
+
+        <div id="basic-info">
+            <textarea disabled name="" id="input-name" cols="1" rows="5" maxlength="5"></textarea><br><span id="name"
+                class="info-lable tap">名字</span><br>
+
+            <div class="line"></div>
+
+            <span>男</span><input type="radio" name="sex" value="男" class="info-input" id="">
+            <span>女</span><input type="radio" name="sex" value="女" class="info-input" id=""><br>
+            <span id="sex" class="info-lable tap">性别</span>
+
+        </div>
+
+        <div id="info">
+            <span id="favorite-song" class="info-lable">最喜欢の一首歌:</span><input type="text" class="info-input" id=""><br>
+            <span id="favorite-star" class="info-lable">最喜欢の一位明星:</span><input type="text" class="info-input" id=""><br>
+            <span id="favorite-movie" class="info-lable">最喜欢の一部电影:</span><input type="text" class="info-input"
+                id=""><br>
+            <span id="favorite-book" class="info-lable">最喜欢の一本书:</span><input type="text" class="info-input" id=""><br>
+            <span id="favorite-sentence" class="info-lable">最喜欢の一个句子:</span><input type="text" class="info-input"
+                id=""><br>
+            <span id="favorite-teacher" class="info-lable">最喜欢の一位老师:</span><input type="text" class="info-input"
+                id=""><br>
+            <span id="favorite-friend" class="info-lable">关系最好の一位朋友</span><input type="text" class="info-input"
+                id=""><br>
+        </div>
+
+        <div id="advice">
+            <span class="vertical">临别赠言</span>
+            <textarea name="" id="" cols="50" rows="5"></textarea>
+        </div>
+
+        <div id="draw">
+            <canvas id="mycanvas" style="background-color: #fff"></canvas><br>
+            <button id="reset" class="button button-action button-rounded">清空画板</button>
+            <input type="color" name="" id="pen-color">
+
+            <input type="radio" name="colors" id="wth_1">细
+            <input type="radio" name="colors" id="wth_2">中
+            <input type="radio" name="colors" id="wth_3">粗
+
+            </span>
+            <button id="eraser" class="button button-rounded">橡皮擦</button>
+            <button id="save" class="button button-block button-rounded button-highlight button-large">保存</button>
+        </div>
+
+        <button class="btn" id="submit">提交</button>
+
+        <div class="mask-wrapper">
+            <div class="mask-box">
+                <div class="mask-content">
+                    <div class="mask-header">
+                        <button class="close"><i class="el-icon el-message-box__close"><svg viewBox="0 0 1024 1024"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor"
+                                        d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z">
+                                    </path>
+                                </svg></i></button>
+                        <span class="mask-header-title"></span>
+                    </div>
+                    <div class="mask-body">
+                        <div class="mask-body-content" id="table-wrapper">
+
+                        </div>
+                    </div>
+                    <div class="mask-foot">
+                        <button class="btn btn-submit">提交</button>
+                        <button class="btn btn-close">关闭</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../js/writePage.js"></script>
+    <script src="../js/board.js"></script>
+    <script src="../js/window-write.js"></script>
+</body>
+
+
+</html>
