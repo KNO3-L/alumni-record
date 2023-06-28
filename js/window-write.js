@@ -29,6 +29,12 @@ class Maskdialog {
         setTimeout(() => {
             this.diaglogContent.style.transform = "rotateX(0)"
         }, 100)
+        this.change()
+    }
+    change() {
+        this.box_height = this.maskBox.offsetHeight
+        let h = (this.box_height) * 0.5
+        this.maskBox.style.marginTop = `calc(50vh - ${h}px)`
     }
     hidden() {
         this.mask.style.display = "none";
@@ -60,10 +66,11 @@ class Maskdialog {
     }
     render(domTemp) {
         if (domTemp instanceof HTMLElement) {
-            domTemp = this.domTostring(domTemp)
+            // value = 0
+            domTemp.offsetParent.removeChild(domTemp)
+            domTemp = this.domTostring(document.importNode(domTemp, true))
         }
         this.maskBody.innerHTML = domTemp
-        document.querySelector("body").removeChild(domTemp)
     }
     domTostring(node) {
         let temNode = document.createElement('div');
@@ -79,6 +86,6 @@ class Maskdialog {
 }
 let mask = new Maskdialog();
 draw_box = document.querySelector("#draw")
-mask.render(document.importNode(draw_box, true));
-
+mask.render(draw_box);
+board_init()
 mask.hidden();

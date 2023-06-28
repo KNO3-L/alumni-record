@@ -6,6 +6,8 @@
     font-weight: 600;
 }
 
+
+
 input[type="text"],
 textarea {
     outline: none;
@@ -170,18 +172,22 @@ body {
     margin: 0px;
 }
 
-#draw {
-    bottom: 100px;
-    right: 0;
-    margin: 0;
-    padding: 0;
-    z-index: 1;
-    height: 150px;
-    width: 300px;
-    position: absolute;
-    user-select: none;
+#mycanvas {
+    border: 1px solid black;
 }
 
 #save {
     margin-top: 5px;
+}
+
+#showMask {
+    position: absolute;
+    z-index: 1;
+    left: 50px;
+    bottom: 70px;
+    width: 7em;
+}
+
+#main>.mask-wrapper {
+    margin: 0;
 }

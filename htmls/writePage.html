@@ -60,19 +60,20 @@
 
         <div id="draw">
             <canvas id="mycanvas" style="background-color: #fff"></canvas><br>
-            <button id="reset" class="button button-action button-rounded">清空画板</button>
+            <button id="reset" class="">清空画板</button>
             <input type="color" name="" id="pen-color">
 
-            <input type="radio" name="colors" id="wth_1">细
+            <input type="radio" name="colors" id="wth_1" checked>细
             <input type="radio" name="colors" id="wth_2">中
             <input type="radio" name="colors" id="wth_3">粗
 
             </span>
-            <button id="eraser" class="button button-rounded">橡皮擦</button>
-            <button id="save" class="button button-block button-rounded button-highlight button-large">保存</button>
+            <button id="eraser" class="">橡皮擦</button>
         </div>
 
+        <button class="btn" id="showMask" onclick="javascript:mask.show()">留下点什么？</button>
         <button class="btn" id="submit">提交</button>
+
 
         <div class="mask-wrapper">
             <div class="mask-box">
@@ -100,6 +101,7 @@
         </div>
 
     </div>
+
 
     <script src="../js/writePage.js"></script>
     <script src="../js/board.js"></script>

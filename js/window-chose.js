@@ -29,6 +29,7 @@ class Maskdialog {
         setTimeout(() => {
             this.diaglogContent.style.transform = "rotateX(0)"
         }, 100)
+        this.change()
     }
     hidden() {
         this.mask.style.display = "none";
@@ -117,6 +118,6 @@ function restInput() {
 let mask = new Maskdialog();
 file_input_box = document.querySelector("#file-input-box")
 mask.render(document.importNode(file_input_box, true));
-
+// draw_init()
 mask.hidden();
 
