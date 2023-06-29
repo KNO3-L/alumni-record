@@ -111,5 +111,34 @@ def save_img():
 
     return resp
 
+@app.route("/save_msg",methods=["POST","OPTIONS"])
+def save_msg():
+    """
+    """
+    resp = Response()
+    if request.method == "POST":
+        resp.headers["Access-Control-Allow-Origin"] = "*"
+
+        # image = request.files["image"]
+        # username = image.filename.split(".")[0]
+        # background_images = os.listdir("../images/background-images/accounts-background-images")
+        # for i in background_images:
+        #     if username in i:
+        #         os.remove("../images/background-images/accounts-background-images/"+i)
+        # image.save(f"../images/background-images/accounts-background-images/{image.filename}")
+        # print(request.get_json())
+
+        body = {"stautes": 0}
+
+        resp.data = json.dumps(body)
+
+    # 处理 options 请求
+    elif request.method == "OPTIONS":
+        # 设置响应头
+        resp.headers["Access-Control-Allow-Origin"] = "*"
+        resp.headers["Access-Control-Allow-Headers"] = "*"
+
+    return resp
+
 if __name__ == "__main__":
     app.run(debug=True)

@@ -49,19 +49,13 @@ class Maskdialog {
             event.stopPropagation()
             if (event.target.classList.contains(".mask-wrapper") || event.target.classList.contains(".mask-box")) {
                 this.hidden();
-                restInput()
             }
         }, false)
         this.closeIcon.addEventListener("click", () => {
             this.hidden();
-            restInput()
         })
         this.cancleBtn.addEventListener("click", () => {
             this.cancle && this.cancle instanceof Function && this.cancle() || this.hidden();
-        })
-
-        this.submitBtn.addEventListener("click", () => {
-            this.submit()
         })
     }
     render(domTemp) {
@@ -87,5 +81,4 @@ class Maskdialog {
 let mask = new Maskdialog();
 draw_box = document.querySelector("#draw")
 mask.render(draw_box);
-board_init()
 mask.hidden();

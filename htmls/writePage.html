@@ -40,16 +40,16 @@
         </div>
 
         <div id="info">
-            <span id="favorite-song" class="info-lable">最喜欢の一首歌:</span><input type="text" class="info-input" id=""><br>
-            <span id="favorite-star" class="info-lable">最喜欢の一位明星:</span><input type="text" class="info-input" id=""><br>
-            <span id="favorite-movie" class="info-lable">最喜欢の一部电影:</span><input type="text" class="info-input"
+            <span class="info-lable">最喜欢の一首歌:</span><input id="favorite-song" type="text" class="info-input" id=""><br>
+            <span class="info-lable">最喜欢の一位明星:</span><input id="favorite-star" type="text" class="info-input" id=""><br>
+            <span class="info-lable">最喜欢の一部电影:</span><input id="favorite-movie" type="text" class="info-input"
                 id=""><br>
-            <span id="favorite-book" class="info-lable">最喜欢の一本书:</span><input type="text" class="info-input" id=""><br>
-            <span id="favorite-sentence" class="info-lable">最喜欢の一个句子:</span><input type="text" class="info-input"
+            <span class="info-lable">最喜欢の一本书:</span><input id="favorite-book" type="text" class="info-input" id=""><br>
+            <span class="info-lable">最喜欢の一个句子:</span><input id="favorite-sentence" type="text" class="info-input"
                 id=""><br>
-            <span id="favorite-teacher" class="info-lable">最喜欢の一位老师:</span><input type="text" class="info-input"
+            <span class="info-lable">最喜欢の一位老师:</span><input id="favorite-teacher" type="text" class="info-input"
                 id=""><br>
-            <span id="favorite-friend" class="info-lable">关系最好の一位朋友</span><input type="text" class="info-input"
+            <span class="info-lable">关系最好の一位朋友</span><input id="favorite-friend" type="text" class="info-input"
                 id=""><br>
         </div>
 
@@ -71,8 +71,8 @@
             <button id="eraser" class="">橡皮擦</button>
         </div>
 
-        <button class="btn" id="showMask" onclick="javascript:mask.show()">留下点什么？</button>
-        <button class="btn" id="submit">提交</button>
+        <button class="btn" id="showMask" onclick="mask.show()">留下点什么？</button>
+        <button class="btn" id="submit" onclick="submit()">提交</button>
 
 
         <div class="mask-wrapper">
@@ -93,8 +93,7 @@
                         </div>
                     </div>
                     <div class="mask-foot">
-                        <button class="btn btn-submit">提交</button>
-                        <button class="btn btn-close">关闭</button>
+                        <button class="btn btn-close">完成</button>
                     </div>
                 </div>
             </div>
@@ -102,10 +101,9 @@
 
     </div>
 
-
     <script src="../js/writePage.js"></script>
-    <script src="../js/board.js"></script>
     <script src="../js/window-write.js"></script>
+    <script src="../js/board.js"></script>
 </body>
 
 

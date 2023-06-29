@@ -68,11 +68,9 @@ function clickEvent(type) {
         })
             .then(response => response.json())
             .then(data => {
-                // console.log('Success:', data);
                 var data = data;
                 switch (data.stautes) {
                     case 0:
-                        // console.log(data_send.name);
                         localStorage.setItem("name", data_send.name)
                         window.location.href = "./htmls/chosePage.html"
                         break;

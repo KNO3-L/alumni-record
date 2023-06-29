@@ -86,7 +86,6 @@ class Maskdialog {
         if (image_preview.src) {
             let formData = new FormData();
             let filename = localStorage.name + "." + file_input.files[0].name.split(".").slice(-1)
-            console.log(filename);
             formData.append('image', file_input.files[0], filename);
             fetch(`http://127.0.0.1:5000/save_img`, {
                 method: 'POST', // or 'PUT'
@@ -94,7 +93,6 @@ class Maskdialog {
             })
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
                     if (data.stautes === 0) {
                         localStorage["filename"] = filename
                         window.location.href = "../htmls/writePage.html"

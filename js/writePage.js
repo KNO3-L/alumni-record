@@ -13,7 +13,6 @@ input_name.value = localStorage.name
 if (localStorage.name == undefined) {
     window.location.href = "../index.html"
 }
-console.log(localStorage.k);
 if (localStorage.k === "3") { background.src = `../images/background-images/accounts-background-images/${localStorage.filename}` }
 else { background.src = `../images/background-images/${localStorage.k}.jpeg` }
 
@@ -38,7 +37,6 @@ file_input.addEventListener("change", () => {
 
     const reader = new FileReader();
     reader.onload = function () {
-        console.log(0);
         const image = new Image();
         image.src = reader.result;
         img_preview.src = reader.result;
@@ -48,3 +46,47 @@ file_input.addEventListener("change", () => {
 img_preview.addEventListener("click", () => {
     file_input.click()
 })
+
+function submit() {
+    is_commit = confirm("确认要提交吗?")
+    if (!is_commit) {
+        return 0
+    }
+
+    const data = {}
+    const info_inputs = [...document.querySelectorAll("#info>input")]
+    const sex_inputs = [...document.querySelectorAll("#basic-info>input[name='sex']")]
+
+    info_inputs.forEach((v) => {
+        data[v.id] = v.value
+    })
+    data.name = localStorage.name
+
+    data.sex = ""
+    sex_inputs.forEach((v) => {
+        if (v.checked) {
+            data.sex = v.value
+        }
+    })
+    // sex_inputs[0].checked == true ? data.sex = "男" : data.sex = "女"
+
+    const formData = new FormData();
+    formData.set(localStorage.name + ".jpg", cvs_save())
+
+    data.darw_img = formData
+
+    data.color = color.value
+
+    data.alpha = range.value / 100
+
+    data.advice = document.querySelector("#advice>textarea").value
+
+    console.log(data);
+    fetch(`http://127.0.0.1:5000/save_msg`, {
+        method: 'POST', // or 'PUT'
+        body: JSON.stringify(data),
+    })
+        .then(response => response.json())
+        .then(data => {
+        })
+}
